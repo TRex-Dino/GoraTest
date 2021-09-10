@@ -58,16 +58,72 @@
 		0A75C3AE26EBE45100E17939 /* GoraTest */ = {
 			isa = PBXGroup;
 			children = (
+				0A75C3C926EBE56F00E17939 /* Services */,
 				0A75C3C326EBE48800E17939 /* .gitignore */,
-				0A75C3AF26EBE45100E17939 /* AppDelegate.swift */,
-				0A75C3B126EBE45100E17939 /* SceneDelegate.swift */,
-				0A75C3B326EBE45100E17939 /* ViewController.swift */,
-				0A75C3B526EBE45100E17939 /* Main.storyboard */,
-				0A75C3B826EBE45400E17939 /* Assets.xcassets */,
-				0A75C3BA26EBE45400E17939 /* LaunchScreen.storyboard */,
-				0A75C3BD26EBE45400E17939 /* Info.plist */,
+				0A75C3C726EBE53800E17939 /* Supporting Files */,
+				0A75C3C826EBE55F00E17939 /* Controllers */,
+				0A75C3C626EBE4FE00E17939 /* Storyboards */,
+				0A75C3C526EBE4F000E17939 /* Resources */,
 			);
 			path = GoraTest;
+			sourceTree = "<group>";
+		};
+		0A75C3C526EBE4F000E17939 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A75C3B826EBE45400E17939 /* Assets.xcassets */,
+				0A75C3BD26EBE45400E17939 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0A75C3C626EBE4FE00E17939 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0A75C3B526EBE45100E17939 /* Main.storyboard */,
+				0A75C3BA26EBE45400E17939 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0A75C3C726EBE53800E17939 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A75C3AF26EBE45100E17939 /* AppDelegate.swift */,
+				0A75C3B126EBE45100E17939 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A75C3C826EBE55F00E17939 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A75C3B326EBE45100E17939 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A75C3C926EBE56F00E17939 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0A75C3CB26EBE62400E17939 /* Networking */,
+				0A75C3CA26EBE58000E17939 /* Model */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0A75C3CA26EBE58000E17939 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A75C3CB26EBE62400E17939 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GoraTest/Info.plist;
+				INFOPLIST_FILE = GoraTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GoraTest/Info.plist;
+				INFOPLIST_FILE = GoraTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
