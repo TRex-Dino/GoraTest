@@ -83,41 +83,43 @@
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-D3-PxS">
                                             <rect key="frame" x="197" y="175.5" width="20" height="20"/>
                                         </activityIndicatorView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zro-w2-rhu">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-Yi-7DS">
                                             <rect key="frame" x="16" y="0.0" width="382" height="371"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igG-uB-AfW" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="321"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-b0-fib">
-                                                    <rect key="frame" x="5" y="331" width="372" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="aDF-dH-vaG"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kE1-MS-8vH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="371"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igG-uB-AfW" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="321"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-b0-fib">
+                                                            <rect key="frame" x="0.0" y="331" width="382" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="vHO-om-ifG"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstItem="igG-uB-AfW" firstAttribute="top" secondItem="zro-w2-rhu" secondAttribute="top" id="0jq-3D-yWa"/>
-                                                <constraint firstAttribute="bottom" secondItem="eL7-b0-fib" secondAttribute="bottom" id="Cnh-AU-JKI"/>
-                                                <constraint firstItem="eL7-b0-fib" firstAttribute="top" secondItem="igG-uB-AfW" secondAttribute="bottom" constant="10" id="Fa2-Bm-qQN"/>
-                                                <constraint firstAttribute="trailing" secondItem="igG-uB-AfW" secondAttribute="trailing" id="KIx-9e-bTI"/>
-                                                <constraint firstItem="igG-uB-AfW" firstAttribute="leading" secondItem="zro-w2-rhu" secondAttribute="leading" id="M5b-sB-jtX"/>
-                                                <constraint firstAttribute="trailing" secondItem="eL7-b0-fib" secondAttribute="trailing" constant="5" id="u2y-eR-zJD"/>
-                                                <constraint firstItem="eL7-b0-fib" firstAttribute="leading" secondItem="zro-w2-rhu" secondAttribute="leading" constant="5" id="wTJ-HB-216"/>
+                                                <constraint firstAttribute="bottom" secondItem="kE1-MS-8vH" secondAttribute="bottom" id="UT1-a5-buK"/>
+                                                <constraint firstAttribute="trailing" secondItem="kE1-MS-8vH" secondAttribute="trailing" id="chQ-Gr-k8s"/>
+                                                <constraint firstItem="kE1-MS-8vH" firstAttribute="leading" secondItem="ApW-Yi-7DS" secondAttribute="leading" id="fn4-J7-aDR"/>
+                                                <constraint firstItem="kE1-MS-8vH" firstAttribute="top" secondItem="ApW-Yi-7DS" secondAttribute="top" id="nyX-mQ-kfb"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="zro-w2-rhu" firstAttribute="top" secondItem="TFG-0c-77d" secondAttribute="top" id="M5I-dP-UqD"/>
-                                        <constraint firstItem="NcP-D3-PxS" firstAttribute="centerY" secondItem="TFG-0c-77d" secondAttribute="centerY" id="bNX-uz-cV3"/>
-                                        <constraint firstItem="zro-w2-rhu" firstAttribute="leading" secondItem="TFG-0c-77d" secondAttribute="leading" constant="16" id="cDe-BF-kzn"/>
-                                        <constraint firstAttribute="bottom" secondItem="zro-w2-rhu" secondAttribute="bottom" id="i5H-D2-B7t"/>
-                                        <constraint firstAttribute="trailing" secondItem="zro-w2-rhu" secondAttribute="trailing" constant="16" id="n12-gc-L35"/>
-                                        <constraint firstItem="NcP-D3-PxS" firstAttribute="centerX" secondItem="TFG-0c-77d" secondAttribute="centerX" id="uqg-ri-JHM"/>
+                                        <constraint firstAttribute="trailing" secondItem="ApW-Yi-7DS" secondAttribute="trailing" constant="16" id="CN3-3V-Eyd"/>
+                                        <constraint firstItem="NcP-D3-PxS" firstAttribute="centerY" secondItem="TFG-0c-77d" secondAttribute="centerY" id="Eis-cX-nsJ"/>
+                                        <constraint firstItem="ApW-Yi-7DS" firstAttribute="leading" secondItem="TFG-0c-77d" secondAttribute="leading" constant="16" id="JRO-Bt-CaW"/>
+                                        <constraint firstItem="NcP-D3-PxS" firstAttribute="centerX" secondItem="TFG-0c-77d" secondAttribute="centerX" id="Y2v-rf-70h"/>
+                                        <constraint firstAttribute="bottom" secondItem="ApW-Yi-7DS" secondAttribute="bottom" id="uN0-Ee-dE0"/>
+                                        <constraint firstItem="ApW-Yi-7DS" firstAttribute="top" secondItem="TFG-0c-77d" secondAttribute="top" id="yY2-Eq-BRC"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="414" height="371"/>

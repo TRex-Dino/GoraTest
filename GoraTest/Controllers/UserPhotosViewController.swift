@@ -59,11 +59,6 @@ class UserPhotosViewController: UICollectionViewController {
         
         cell.label.text = photos[indexPath.row].title
         
-        cell.layer.shadowColor = UIColor.lightGray.cgColor
-        cell.layer.shadowRadius = 1
-        cell.layer.shadowOpacity = 3
-        cell.layer.cornerRadius = 5
-        
         return cell
     }
     
@@ -79,7 +74,7 @@ extension UserPhotosViewController: UICollectionViewDelegateFlowLayout {
     }
     private var sectionInsets: UIEdgeInsets {
         get {
-            UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
+            UIEdgeInsets(top: 10, left: 16, bottom: 30, right: 16)
         }
     }
     
@@ -89,9 +84,9 @@ extension UserPhotosViewController: UICollectionViewDelegateFlowLayout {
         
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth + 30
+        let widthPerItem = availableWidth / itemsPerRow
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: widthPerItem + 20, height: widthPerItem + 50)
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -105,12 +100,6 @@ extension UserPhotosViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        sectionInsets.bottom
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         sectionInsets.bottom
     }
 }

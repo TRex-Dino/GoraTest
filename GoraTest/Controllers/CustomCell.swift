@@ -12,4 +12,14 @@ class CustomCell: UICollectionViewCell {
     @IBOutlet weak var imageView: WebImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    override func layoutSubviews() {
+        
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowRadius = 3.0
+        layer.shadowOpacity = 1
+        
+        layer.cornerRadius = 5.0
+        layer.masksToBounds = false
+    }
 }

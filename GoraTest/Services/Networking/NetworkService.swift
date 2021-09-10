@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkService {
+final class NetworkService {
     
     static let shared = NetworkService()
     private let url = "https://jsonplaceholder.typicode.com"

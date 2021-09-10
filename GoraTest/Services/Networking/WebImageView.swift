@@ -2,7 +2,7 @@
 //  WebImageView.swift
 //  VKTestM
 //
-//  Created by Dmitry on 17.08.2021.
+//  Created by Dmitry on 10.09.2021.
 //
 
 import UIKit

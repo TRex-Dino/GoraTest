@@ -8,13 +8,13 @@
 import UIKit
 
 class UserListViewController: UITableViewController {
-
+    
     private var users = [User]()
     private let cell = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fetchUsersData()
     }
     
@@ -22,7 +22,6 @@ class UserListViewController: UITableViewController {
         NetworkService.shared.fetchUsersData { result in
             
             switch result {
-            
             case .success(let users):
                 self.users = users
                 DispatchQueue.main.async {
@@ -33,27 +32,24 @@ class UserListViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         users.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath)
         
         cell.textLabel?.text = users[indexPath.row].name
-
+        
         return cell
     }
-    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        
         
         guard let usersPhotoVC = segue.destination as? UserPhotosViewController else {
             return
@@ -63,6 +59,4 @@ class UserListViewController: UITableViewController {
         usersPhotoVC.userId = users[indexPath.row].id
         
     }
-    
-
 }
