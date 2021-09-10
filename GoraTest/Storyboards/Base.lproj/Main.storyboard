@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="G13-RN-dbj" kind="show" id="blY-Q7-UVQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -53,6 +57,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50V-Rv-iBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="98.550724637681171" y="62.946428571428569"/>
+        </scene>
+        <!--User Photos View Controller-->
+        <scene sceneID="0Eb-UX-5NK">
+            <objects>
+                <collectionViewController id="G13-RN-dbj" customClass="UserPhotosViewController" customModule="GoraTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eWF-Vp-2q9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="EFS-Ov-TDx">
+                            <size key="itemSize" width="414" height="371"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="FNO-hH-QmJ" customClass="CustomCell" customModule="GoraTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TFG-0c-77d">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-D3-PxS">
+                                            <rect key="frame" x="197" y="175.5" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zro-w2-rhu">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="371"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igG-uB-AfW" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="321"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-b0-fib">
+                                                    <rect key="frame" x="5" y="331" width="372" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="aDF-dH-vaG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="igG-uB-AfW" firstAttribute="top" secondItem="zro-w2-rhu" secondAttribute="top" id="0jq-3D-yWa"/>
+                                                <constraint firstAttribute="bottom" secondItem="eL7-b0-fib" secondAttribute="bottom" id="Cnh-AU-JKI"/>
+                                                <constraint firstItem="eL7-b0-fib" firstAttribute="top" secondItem="igG-uB-AfW" secondAttribute="bottom" constant="10" id="Fa2-Bm-qQN"/>
+                                                <constraint firstAttribute="trailing" secondItem="igG-uB-AfW" secondAttribute="trailing" id="KIx-9e-bTI"/>
+                                                <constraint firstItem="igG-uB-AfW" firstAttribute="leading" secondItem="zro-w2-rhu" secondAttribute="leading" id="M5b-sB-jtX"/>
+                                                <constraint firstAttribute="trailing" secondItem="eL7-b0-fib" secondAttribute="trailing" constant="5" id="u2y-eR-zJD"/>
+                                                <constraint firstItem="eL7-b0-fib" firstAttribute="leading" secondItem="zro-w2-rhu" secondAttribute="leading" constant="5" id="wTJ-HB-216"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zro-w2-rhu" firstAttribute="top" secondItem="TFG-0c-77d" secondAttribute="top" id="M5I-dP-UqD"/>
+                                        <constraint firstItem="NcP-D3-PxS" firstAttribute="centerY" secondItem="TFG-0c-77d" secondAttribute="centerY" id="bNX-uz-cV3"/>
+                                        <constraint firstItem="zro-w2-rhu" firstAttribute="leading" secondItem="TFG-0c-77d" secondAttribute="leading" constant="16" id="cDe-BF-kzn"/>
+                                        <constraint firstAttribute="bottom" secondItem="zro-w2-rhu" secondAttribute="bottom" id="i5H-D2-B7t"/>
+                                        <constraint firstAttribute="trailing" secondItem="zro-w2-rhu" secondAttribute="trailing" constant="16" id="n12-gc-L35"/>
+                                        <constraint firstItem="NcP-D3-PxS" firstAttribute="centerX" secondItem="TFG-0c-77d" secondAttribute="centerX" id="uqg-ri-JHM"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="371"/>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="NcP-D3-PxS" id="xFy-RA-tkD"/>
+                                    <outlet property="imageView" destination="igG-uB-AfW" id="sWP-u7-kjB"/>
+                                    <outlet property="label" destination="eL7-b0-fib" id="U31-CH-ffo"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="G13-RN-dbj" id="GoN-HY-qqm"/>
+                            <outlet property="delegate" destination="G13-RN-dbj" id="pdm-N9-SjQ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="kFw-AD-dLB"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jZ-y6-GPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="62.946428571428569"/>
         </scene>
     </scenes>
     <resources>

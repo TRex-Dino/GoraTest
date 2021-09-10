@@ -17,6 +17,8 @@
 		0A75C3CF26EBE73100E17939 /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75C3CE26EBE73100E17939 /* UserPhoto.swift */; };
 		0A75C3D326EBE8E100E17939 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75C3D226EBE8E100E17939 /* UserListViewController.swift */; };
 		0A75C3D526EBE98E00E17939 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75C3D426EBE98E00E17939 /* NetworkService.swift */; };
+		0A75C3DB26EBF74A00E17939 /* UserPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75C3DA26EBF74A00E17939 /* UserPhotosViewController.swift */; };
+		0A75C3DD26EBF9C200E17939 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75C3DC26EBF9C200E17939 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0A75C3CE26EBE73100E17939 /* UserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
 		0A75C3D226EBE8E100E17939 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		0A75C3D426EBE98E00E17939 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0A75C3DA26EBF74A00E17939 /* UserPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotosViewController.swift; sourceTree = "<group>"; };
+		0A75C3DC26EBF9C200E17939 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				0A75C3D226EBE8E100E17939 /* UserListViewController.swift */,
+				0A75C3DA26EBF74A00E17939 /* UserPhotosViewController.swift */,
+				0A75C3DC26EBF9C200E17939 /* CustomCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				0A75C3B226EBE45100E17939 /* SceneDelegate.swift in Sources */,
 				0A75C3D526EBE98E00E17939 /* NetworkService.swift in Sources */,
 				0A75C3D326EBE8E100E17939 /* UserListViewController.swift in Sources */,
+				0A75C3DD26EBF9C200E17939 /* CustomCell.swift in Sources */,
+				0A75C3DB26EBF74A00E17939 /* UserPhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,4 +13,10 @@ struct User: Codable {
     let id: Int
 }
 
+struct Photo: Codable {
+    let albumId: Int
+    let id: Int
+    let title: String
+    let url: String
+}
 
